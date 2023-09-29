@@ -2,6 +2,12 @@
 /dist
 /node_modules
 
+# IDE - VSCode
+.vscode/*
+
+# Environment
+*.env
+
 # Logs
 logs
 *.log

@@ -1,8 +1,27 @@
 {
   "name": "be-cloud-superfeats",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Backend APIs for Superfeats",
+  "homepage": "https://be-cloud-superfeats.vercel.app/",
+  "maintainers": ["UmerNasir-2000"],
+  "keywords": [
+    "nestjs",
+    "typescript",
+    "node",
+    "backend",
+    "api",
+    "prisma",
+    "swagger",
+    "jest"
+  ],
+  "repository": {
+    "url": "https://github.com/UmerNasir-2000/be-cloud-superfeats.git"
+  },
+  "author": {
+    "name": "M. Umer Nasir",
+    "email": "umer.nas@outlook.com",
+    "url": "https://github.com/UmerNasir-2000"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

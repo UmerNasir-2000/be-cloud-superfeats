@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
-import { SuperfeatService } from './superfeat.service';
+import SuperfeatService from './superfeat.service';
 
 @Controller('superfeat')
-export class SuperfeatController {
+export default class SuperfeatController {
   constructor(private readonly superfeatService: SuperfeatService) {}
 
   @Get()

@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TroveController } from './trove.controller';
-import { TroveService } from './trove.service';
+import TroveController from './trove.controller';
+import TroveService from './trove.service';
 
 describe('TroveController', () => {
   let controller: TroveController;

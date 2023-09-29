@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SuperfeatController } from './superfeat.controller';
-import { SuperfeatService } from './superfeat.service';
+import SuperfeatController from './superfeat.controller';
+import SuperfeatService from './superfeat.service';
 
 describe('SuperfeatController', () => {
   let controller: SuperfeatController;

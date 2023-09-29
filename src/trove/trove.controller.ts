@@ -8,10 +8,10 @@ import {
   Post,
 } from '@nestjs/common';
 import { Trove } from '@prisma/client';
-import { TroveService } from './trove.service';
+import TroveService from './trove.service';
 
 @Controller('trove')
-export class TroveController {
+export default class TroveController {
   constructor(private readonly troveService: TroveService) {}
 
   @Get()

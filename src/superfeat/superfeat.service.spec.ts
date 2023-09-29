@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SuperfeatService } from './superfeat.service';
+import SuperfeatService from './superfeat.service';
 
 describe('SuperfeatService', () => {
   let service: SuperfeatService;

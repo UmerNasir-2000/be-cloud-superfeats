@@ -3,7 +3,7 @@ import { Trove } from '@prisma/client';
 import TroveRepository from './repository/trove.repository';
 
 @Injectable()
-export class TroveService {
+export default class TroveService {
   constructor(private readonly troveRepository: TroveRepository) {}
 
   create(data: Trove) {

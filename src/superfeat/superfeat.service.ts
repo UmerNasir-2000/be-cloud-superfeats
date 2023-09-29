@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import SuperfeatRepository from './repository/superfeat.repository';
 
 @Injectable()
-export class SuperfeatService {
+export default class SuperfeatService {
   constructor(private readonly superfeatRepository: SuperfeatRepository) {}
 
   findAll() {

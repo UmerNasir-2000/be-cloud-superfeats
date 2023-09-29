@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Superfeat } from '@prisma/client';
-import { PrismaService } from '../../database/database.service';
+import PrismaService from '../../database/database.service';
 
 @Injectable()
 export default class SuperfeatRepository {

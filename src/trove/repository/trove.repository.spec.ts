@@ -81,9 +81,7 @@ describe('TroveRepository', () => {
 
       expect(
         repository.create({
-          id: 'a7cbb54d-7c52-4ebf-9ced-e6b86e9a422f',
           title: 'Trove 1',
-          createdAt,
         }),
       ).resolves.toEqual(mockedTrove);
     });
@@ -110,6 +108,29 @@ describe('TroveRepository', () => {
       prisma.trove.update.mockRejectedValue(new Error());
       expect(
         repository.update('a7cbb54d-7c52-4ebf-9ced-e6b86e9a422f', {}),
+      ).rejects.toThrow();
+    });
+  });
+
+  describe('remove', () => {
+    it(`should remove trove when the given id exists`, async () => {
+      const mockedTrove: Trove = {
+        id: 'a7cbb54d-7c52-4ebf-9ced-e6b86e9a422f',
+        title: 'Trove 1',
+        createdAt: new Date(),
+      };
+
+      prisma.trove.delete.mockResolvedValue(mockedTrove);
+
+      expect(
+        repository.remove('a7cbb54d-7c52-4ebf-9ced-e6b86e9a422f'),
+      ).resolves.toEqual(mockedTrove);
+    });
+
+    it(`should throw when trove with given id does not exist`, async () => {
+      prisma.trove.delete.mockRejectedValue(new Error());
+      expect(
+        repository.remove('a7cbb54d-7c52-4ebf-9ced-e6b86e9a422f'),
       ).rejects.toThrow();
     });
   });

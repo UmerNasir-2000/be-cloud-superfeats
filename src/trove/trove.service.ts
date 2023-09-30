@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
-import { Trove } from '@prisma/client';
+import CreateTroveDto from './dto/create.trove.dto';
+import UpdateTroveDto from './dto/update.trove.dto';
 import TroveRepository from './repository/trove.repository';
 
 @Injectable()
 export default class TroveService {
   constructor(private readonly troveRepository: TroveRepository) {}
 
-  create(data: Trove) {
+  create(data: CreateTroveDto) {
     return this.troveRepository.create(data);
   }
 
@@ -18,7 +19,11 @@ export default class TroveService {
     return this.troveRepository.findAll();
   }
 
-  update(id: string, data: Partial<Trove>) {
+  update(id: string, data: UpdateTroveDto) {
     return this.troveRepository.update(id, data);
+  }
+
+  remove(id: string) {
+    return this.troveRepository.remove(id);
   }
 }
